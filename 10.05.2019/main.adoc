@@ -1,0 +1,28 @@
+:my-title: Architecture of the algorithm of the AngloChinese transliteration of postal addresses
+:my-subtitle: Contract #41-19-CIT
+:city-date: Minsk 2019
+= {my-title}: {my-subtitle}
+:notitle:
+:date: 10.05.2019
+:version: 0.0.1
+:author_name: Grudovich Yauheni
+:lang: en
+:front-cover-image: title.pdf
+:parametres_path: resources/themes/parametres/{lang}
+include::{parametres_path}/parametres.adoc[lines1..34]
+include::{parametres_path}/author.adoc[]
+
+//Далее идет заполнение документа
+include::includes/including.adoc[leveloffset=+1]
+include::includes/including1.adoc[leveloffset=+1]
+include::includes/including2.adoc[leveloffset=+1]
+include::includes/including3.adoc[leveloffset=+1]
+include::includes/including4.adoc[leveloffset=+1]
+
+== {version-doc}
+
+[cols="3,4,4,10a", options="header"]
+|===
+| {version-tab}     | {date-tab}   | {author-tab}   | {amendment-tab}
+.<| {version}     .<| {date}     .<| {author}     .<| First release
+|===

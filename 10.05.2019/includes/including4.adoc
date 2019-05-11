@@ -1,0 +1,78 @@
+:imagesdir: img
+
+=	System operation description
+
+
+[frame="none",grid=none]
+[columns="1,2"]
+|====
+| image:1.png[] | The system is a modular architecture in which each module performs a separate function and transmit
+the results to the next module. The result of each module is described below.
+
+*Module 1.* +
+
+Search module for standard words denoting the type of geographical object, such as area, street, house, building, etc.
+ These words require translation, not transliteration. The search algorithm should be based on the search for inaccurate matches and allow the reduction of words or 1-2 errors.
+ The search is made on the basis of the list of standard words used in writing the address will and should be in the plug-in and extensible library. When finding the automatic
+ translation of words into the target language. Numbers, auxiliary symbols and punctuation marks will be marked as not requiring transliteration or translation.
+
+*Module 2.* +
+
+Words that do not participate in translation in module 2 will be considered proper names and will be transliterated.
+Transliteration will be done by syllables. The main problem with transliteration is the lack of knowledge about the
+accent and syllable tones, as well as the context. Thus, the transliteration of Chinese names written in Latin cannot
+be made unambiguously, the transliteration will have several equally probable variants.
+|====
+
+[frame="none",grid=none]
+[columns="2,1"]
+|====
+| *Module 3.* +
+For each syllable in the title will be selected a number of characters with similar pronunciation.
+ The combinatorics of all possible variants can contain both the only correct spelling of the address and a random coincidence with other geographical names.
+ For the transliteration of syllables you will use the library from Google allowing commercial use. | image:2.png[]
+|====
+
+*Module 4.* +
+
+To solve the problem of multivariance, it is planned to check all equally probable transliteration options by
+comparing them with the base of real geographical names. Each of the address options will be checked through the
+map search system. As a result, weight coefficients will be assigned depending on the number of search results.
+
+*As systems of cartographic search systems can be used:* +
+
+Open Street Map is an open source project. Can be completely lifted in this project on server capacities of the
+customer. The advantage of this approach is the absence of restrictions on the number of requests to the server,
+and flexible system setup to achieve the desired performance. The map service is updated by the community and does
+not guarantee the relevance of the information. Regular updates are required. +
+Baidu Maps – API of the official map service. Regular updating of information, optimization for work in the
+Chinese region. Requires commercial use rights.
+
+*Module 5.* +
+
+In the event that two or more transliteration options have similar weights, the user is asked which address he meant
+based on the larger geographical areas.
+
+*Module 6.* +
+
+System of statistics collection and user notification. The system will collect the following statistics about the operation of the system
+
+• A system of collecting user-accepted addresses for faster search of the most frequently repeated requests. The system allows you to remember which addresses users specified as correctly transliterated and repeated requests with a perfect match will primarily use the results of previous searches. The system allows you to correct possible errors and improve the user experience.
+• A system for collecting metrics on the frequency of errors and the types of these errors during transliteration
+The system will issue the following types of errors and warnings
+• 01 - Error – all weights showed a low value. None of the variants of transliteration has not been validated as correct.
+• 02 - Error – one or more syllables could not be transliterated into hieroglyphs
+• 03 – Warning (request to user) – weight coefficients of two or more transliteration variants gave equally high values of weight coefficients
+
+*RoadMap*
+
+.	The system of transliteration of syllables 1-2 days
+.	Mapping system of geoprospecting and validation 3-5 days
+.	System of cost estimation of search results 1-2 days
+.	Testing 2-3 days
+.	System Assembly 2-3 days
+.	The system of collecting statistics and warnings 5-7 days
+
+image::3.png[]
+
+<<<<

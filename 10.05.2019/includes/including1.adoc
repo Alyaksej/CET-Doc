@@ -1,0 +1,8 @@
+:imagesdir: img
+
+=	Usage scenario
+
+User from Europe carries out a postal money order in the China. When entering the address, geographical names, the user can not specify the address on the hieroglyphic recording system.
+The user enters the name transliterated in the Latin alphabet. The system substitutes for it a suitable geographical name in Chinese.
+
+<<<<

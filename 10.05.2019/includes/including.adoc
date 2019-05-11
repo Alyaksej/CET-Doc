@@ -1,0 +1,8 @@
+:imagesdir: img
+
+=	General description of the subject area and tasks
+
+This document presents the terms of reference and a description of the system architecture.
+The system is designed to automate the process of transliteration of geographical names of postal items from English into Chinese.
+
+<<<<

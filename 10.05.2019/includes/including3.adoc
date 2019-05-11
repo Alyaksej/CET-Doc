@@ -1,0 +1,16 @@
+:imagesdir: img
+
+=	API services
+
+== Input
+
+•	InAddress – Type string. The input line with the address. The address is written in the Latin alphabet with the use of any auxiliary characters and punctuation. String length is not limited.
+•	Language – Type string. The name of the source language is designated according to the standard ISO 639-1 (en, zh)
+
+
+== Output
+
+•	OutAddress – Type String. Output string with address transliteration.
+•	Status – Type String. Status of errors and warnings. Error codes are listed on a single comma-delimited line. Error codes are described in the statistics collection module.
+
+<<<<

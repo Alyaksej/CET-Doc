@@ -1,0 +1,23 @@
+:imagesdir: img
+
+=	Software solution requirements
+
+== Functional requirement
+
+.	The system should be able to automatically determine the language from which you want to transliterate
+.	The system should automatically distinguish the types of geographical objects (street, building, house, area, etc.) from the proper names
+.	The system should ask the user for confirmation in case of disputes
+.	The system should inform the user about errors or impossibility of transliteration
+.	The system should support the following Chinese dialects:
+•	Mandarin
+•	Cantonese
+
+== Other requirements
+
+.	The system must have an API interface for integration into other projects
+.	The system must be delivered as a web service on the customer's servers
+.	Open source projects or other subsystems used in the system must be distributed under an open license
+.	The system should be able to collect metrics and feedback from users about the operation of the system
+.	The response time from the server should not exceed 100ms in the worst case.
+
+<<<<
